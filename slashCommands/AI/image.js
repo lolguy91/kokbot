@@ -5,7 +5,7 @@ const ee = require("../../botconfig/embed.json");
 const settings = require("../../botconfig/settings.json");
 module.exports = {
   name: "image", //the command name for the Slash Command
-  description: "Send a Text into the Chat", //the command description for Slash Command Overview
+  description: "Generate an AI image!", //the command description for Slash Command Overview
   cooldown: 5,
   memberpermissions: [], //Only allow members with specific Permissions to execute a Commmand [OPTIONAL]
   requiredroles: [], //Only allow specific Users with a Role to execute a Command [OPTIONAL]
@@ -25,7 +25,7 @@ module.exports = {
 		} = interaction; 
 		const { guild } = member;
 		const Text = options.getString("text");
-	const apiKey = "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";
+	const apiKey = config.OpenAIkey;
 	const client = axios.create({
 	    headers: { 'Authorization': 'Bearer ' + apiKey }
 	});
@@ -55,7 +55,7 @@ module.exports = {
   ]
 });
 	}).catch(err => {
-	 interaction.reply({content: `error` + err, ephemeral: true}); 
+    interaction.channel.send({content: `error` + err, ephemeral: true}); 
 	});
     } catch (e) {
         console.log(String(e.stack).bgRed)
