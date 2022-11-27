@@ -1,6 +1,6 @@
 {
-  "OpenAIkey" : "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",
-  "token": "OTk1NjUyMjg4NDYwOTAyNDYw.GTo5sz.9o6xSbx9QQkQ5Zx64SyCSkjrosniWtXZ5tH4oo",
+  "OpenAIkey" : "<< OPENAI KEY GOES HERE >>",
+  "token": "<< BOT TOKEN GOES HERE >>",
   "prefix": "!",
   "loadSlashsGlobal": false, "_COMMENT_": "Set it to true, when your Slash Commands are ready, false loads instant true loads slow but stable! (GLOBAL/GUILD COMMANDS, DISCORD DOCS!)",
   "slashCommandsDirs": [
