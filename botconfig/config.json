@@ -1,6 +1,6 @@
 {
-  "OpenAIkey" : "Openai key here",
-  "token": "BOT TOKEN HERE",
+  "OpenAIkey" : "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",
+  "token": "OTk1NjUyMjg4NDYwOTAyNDYw.GTo5sz.9o6xSbx9QQkQ5Zx64SyCSkjrosniWtXZ5tH4oo",
   "prefix": "!",
   "loadSlashsGlobal": false, "_COMMENT_": "Set it to true, when your Slash Commands are ready, false loads instant true loads slow but stable! (GLOBAL/GUILD COMMANDS, DISCORD DOCS!)",
   "slashCommandsDirs": [
@@ -8,6 +8,11 @@
                 "Folder": "AI",
                 "CmdName": "ai",
                 "CmdDescription": "Ask an AI to do shit"
+        },
+        {
+                "Folder": "Info",
+                "CmdName": "info",
+                "CmdDescription": "Info"
         }
    ]
 }

@@ -47,7 +47,7 @@ module.exports = {
       "description": "Prompt: " + Text +"\nRequested by: " + "<@" + interaction .member + ">",
       "color": 0x00FFFF,
       "image": {
-        "url": result.data.data[0].url,
+        "url": "https://webshot.nodesite.eu/rest/1024/1024/full/" + result.data.data[0].url,
         "height": 600,
         "width": 600
       }

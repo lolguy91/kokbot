@@ -76,7 +76,7 @@ module.exports = {
 			const embeduserinfo = new MessageEmbed()
 			embeduserinfo.setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512 }))
 			embeduserinfo.setAuthor("Information about:   " + member.user.username + "#" + member.user.discriminator, member.user.displayAvatarURL({ dynamic: true }), "https://discord.gg/FQGXbypRf8")
-			embeduserinfo.addField('**❱ Username:**',`<@${member.user.id}>\n\`${member.user.tag}\``,true)
+			embeduserinfo.addField('**❱ Username:**',`\`${member.user.tag}\``,true)
 			embeduserinfo.addField('**❱ ID:**',`\`${member.id}\``,true)
 			embeduserinfo.addField('**❱ Avatar:**',`[\`Link to avatar\`](${member.user.displayAvatarURL({ format: "png" })})`,true)
 			embeduserinfo.addField('**❱ Date Join DC:**', "\`"+moment(member.user.createdTimestamp).format("DD/MM/YYYY") + "\`\n" + "`"+ moment(member.user.createdTimestamp).format("hh:mm:ss") + "\`",true)
@@ -101,7 +101,7 @@ module.exports = {
 			embeduserinfo.setColor(ee.color)
 			embeduserinfo.setFooter(ee.footertext, ee.footericon)
 			//send the EMBED
-			interaction.reply({embeds: [embeduserinfo], ephemeral: true})
+			interaction.reply({embeds: [embeduserinfo],})
 		  }catch (e){
 			console.log(e)
 			const userFlags = UserOption.flags.toArray();
@@ -110,7 +110,7 @@ module.exports = {
 			const embeduserinfo = new MessageEmbed()
 			embeduserinfo.setThumbnail(UserOption.displayAvatarURL({ dynamic: true, size: 512 }))
 			embeduserinfo.setAuthor("Information about:   " + UserOption.username + "#" + UserOption.discriminator, UserOption.displayAvatarURL({ dynamic: true }), "https://discord.gg/FQGXbypRf8")
-			embeduserinfo.addField('**❱ Username:**',`<@${UserOption.id}>\n\`${UserOption.tag}\``,true)
+			embeduserinfo.addField('**❱ Username:**',`\`${UserOption.tag}\``,true)
 			embeduserinfo.addField('**❱ ID:**',`\`${UserOption.id}\``,true)
 			embeduserinfo.addField('**❱ Avatar:**',`[\`Link to avatar\`](${UserOption.displayAvatarURL({ format: "png" })})`,true)
 			embeduserinfo.addField('**❱ Flags:**',`\`${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}\``,true)
@@ -131,7 +131,7 @@ module.exports = {
 			embeduserinfo.setColor(ee.color)
 			embeduserinfo.setFooter(ee.footertext, ee.footericon)
 			//send the EMBED
-			interaction.reply({embeds: [embeduserinfo], ephemeral: true})
+			interaction.reply({embeds: [embeduserinfo]})
 		  }
     } catch (e) {
         console.log(String(e.stack).bgRed)
