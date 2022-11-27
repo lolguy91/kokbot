@@ -1,12 +1,12 @@
 module.exports = async (client, thread) => {
-    if(thread.joinable){
-        try{
-            await thread.join();
-        }catch (e){
-            console.log(e)
-        }
-    }
-}
+	if (thread.joinable) {
+		try {
+			await thread.join();
+		} catch (e) {
+			console.log(e);
+		}
+	}
+};
 /**
  * @INFO
  * Bot Coded by Tomato#6966 | https://discord.gg/milrato
